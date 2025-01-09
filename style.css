@@ -1,0 +1,698 @@
+* {
+  color: #000;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  scroll-margin: 140px;
+  font-size: 24.5555px;
+}
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url("fonts/glyphiconshalflings_regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul a,
+ul div {
+  color: inherit;
+}
+
+body {
+  position: relative;
+  background: #FFFFFF;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+span {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+button {
+  color: inherit;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: calc(1400px / var(--scale-factor));
+  width: 100%;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: calc(100px / var(--scale-factor));
+}
+
+header {
+  background-color: #fede31;
+}
+
+.header__menuUp {
+  padding: calc(10px / var(--scale-factor)) 0px calc(20px / var(--scale-factor)) 0px;
+}
+.header__menuUp a:hover * {
+  color: red !important;
+}
+.header__menuUp a:hover {
+  color: red !important;
+}
+.header__menuUpIcon {
+  font-family: 'Glyphicons Halflings';
+  color: #000000;
+}
+
+.header__menuUp ul {
+  display: flex;
+  gap: calc(30px / var(--scale-factor));
+
+}
+
+.header__menuUp ul li a {
+  display: flex;
+  gap: calc(5px / var(--scale-factor));
+}
+
+.header__menuUp ul li:first-child {
+  padding-left: calc(15px / var(--scale-factor));
+}
+
+.header__down {
+  display: flex;
+  height: 70px;
+  align-items: center;
+
+
+}
+#svg-logo {
+  width: calc(155px / var(--scale-factor));
+  height: calc(50px / var(--scale-factor));
+}
+.header__downMenu {
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+
+.header__downMenu ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__downMenu ul li {
+  color: #665800;
+  text-align: center;
+}
+
+.header__downLogo {
+  margin-left: calc(15px / var(--scale-factor));
+  height: 100%;
+  height: calc(50px / var(--scale-factor));
+}
+
+.header__downMenu ul li:first-child {
+  margin-left: calc(100px / var(--scale-factor));
+}
+
+.header__downMenu ul li:last-child {
+  margin-right: calc(50px / var(--scale-factor));
+}
+
+.header__line {
+  height: calc(1px / var(--scale-factor));
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.main .container {
+  border-radius: calc(10px / var(--scale-factor));
+  background-color: #ebebed;
+  padding-bottom: calc(20px / var(--scale-factor));
+  padding-top: calc(15px / var(--scale-factor));
+  margin-top: calc(10px / var(--scale-factor));
+}
+
+.main__info {
+  padding: 0px calc(100px / var(--scale-factor));
+  display: flex;
+  gap: calc(50px / var(--scale-factor));
+}
+
+.main__infoPrice {
+  display: flex;
+  margin-bottom: calc(15px / var(--scale-factor));
+  align-items: center;
+}
+
+.main__infoPrice a {
+  background-color: #fede31;
+  text-align: center;
+  border-radius: calc(2px / var(--scale-factor));
+  width: 100%;
+  padding: calc(7px / var(--scale-factor)) 0px;
+
+}
+
+.main__infoPrice span {
+  color: #000000;
+  font-size: 24.5455px;
+}
+
+.main__infoPrice h2 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 40.5px;
+}
+
+.main__infoLeft table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table>tbody>tr>td,
+table>tbody>tr>th,
+table>tfoot>tr>td,
+table>tfoot>tr>th,
+table>thead>tr>td,
+table>thead>tr>th {
+  border-top: calc(1px / var(--scale-factor)) solid #ddd;
+  padding: calc(4px / var(--scale-factor));
+  font-size: calc(15px / var(--scale-factor));
+  color: #000000;
+}
+
+th {
+  border: 0;
+}
+
+.main__infoLeft tbody tr:nth-child(odd) {
+  background-color: #f4f4f4;
+}
+
+.main__infoLeft {
+  width: 50%;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+td {
+  text-align: left;
+}
+
+tr:hover {
+  cursor: pointer;
+  background-color: #fede31 !important;
+}
+
+.main__infoAddsBlock svg {
+  max-width: calc(550px / var(--scale-factor));
+  width: 100%;
+  background: #FFF;
+}
+
+.main__infoRight {
+  max-width: calc(550px / var(--scale-factor));
+  width: 100%;
+}
+
+.main__infoAdd {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  display: none;
+}
+
+.main__infoAdd.preactive {
+  display: block;
+}
+
+.main__infoAdd.active {
+  opacity: 1;
+  visibility: visible;
+  position: static;
+}
+
+.hideAdd {
+  opacity: 0;
+  animation: change-background 1.3s ease-in 2;
+}
+.hideAdd-2 {
+  opacity: 0;
+  animation: change-background-3 1.3s ease-in;
+}
+
+.hideSecond {
+  opacity: 0;
+  animation: change-background-2 1.3s ease-in;
+}
+
+.hideAddPost {
+  opacity: 0;
+  animation: change-background 2s linear infinite;
+}
+
+@keyframes change-background{
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes change-background-3{
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes change-background-2 {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+.header__downMenu ul li a:hover {
+  color: red;
+  transition: .3s;
+}
+
+.main__infoTypesRadioForm svg {
+  width: calc(20px / var(--scale-factor));
+  height: calc(20px / var(--scale-factor));
+}
+
+.table__row-active {
+  background-color: #fede31 !important;
+}
+
+.main__infoAddsRadio {
+  display: flex;
+  gap: calc(15px / var(--scale-factor));
+  justify-content: center;
+  position: absolute;
+  top: calc(15px / var(--scale-factor));
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__downLogo svg {
+  width: calc(155px / var(--scale-factor));
+  height: calc(50px / var(--scale-factor));
+}
+/* Скрыть стандартные радиокнопки */
+.main__infoAddsRadioForm input[name="radio"],
+.main__infoTypesRadioForm input[name="radioType"] {
+  display: none;
+}
+tr th:first-child {
+  padding-left: 20px;
+}
+.main__infoTypesRadio {
+  position: absolute;
+  bottom: calc(65px / var(--scale-factor));
+  display: flex;
+  gap: calc(65px / var(--scale-factor));
+  left: calc(41px / var(--scale-factor));
+}
+
+.main__infoRight {
+  position: relative;
+  ;
+}
+
+.main__infoAddsBlock {
+  position: relative;
+  background: #fff;
+  border: calc(1px / var(--scale-factor)) solid #000;
+}
+
+.main__infoAddsRadioForm svg,
+.main__infoTypesRadioForm svg {
+  fill: none;
+  vertical-align: middle;
+  background: none;
+  cursor: pointer;
+}
+
+.main__infoAddsRadioForm svg circle,
+.main__infoTypesRadioForm svg circle {
+  stroke-width: 2;
+  stroke: #C8CCD4;
+  transition: all 0.4s ease;
+  stroke-dashoffset: 0;
+}
+
+.main__infoAddsRadioForm svg path.inner,
+.main__infoTypesRadioForm svg path.inner {
+  stroke-width: 6;
+  stroke-dasharray: 19;
+  stroke-dashoffset: 19;
+}
+
+.main__infoAddsRadioForm svg path.outer,
+.main__infoTypesRadioForm svg path.outer {
+  stroke-width: 2;
+  stroke-dasharray: 57;
+  stroke-dashoffset: 57;
+}
+
+.header__mobNav {
+  display: none;
+}
+
+.main__infoAddsRadioForm input[name="radio"]:checked+label svg path,
+.main__infoTypesRadioForm input[name="radioType"]:checked+label svg path {
+  transition: all 0.4s ease;
+  stroke: #fede31;
+}
+
+.main__infoAddsRadioForm input[name="radio"]:checked+label svg path.inner,
+.main__infoTypesRadioForm input[name="radioType"]:checked+label svg path.inner {
+  stroke-dashoffset: 38;
+  transition-delay: 0.3s;
+}
+
+.main__infoAddsRadioForm input[name="radio"]:checked+label svg path.outer,
+.main__infoTypesRadioForm input[name="radioType"]:checked+label svg path.outer {
+  stroke-dashoffset: 0;
+}
+
+
+.main__infoRight p {
+  margin-top: calc(10px / var(--scale-factor));
+  text-align: center;
+  font-weight: normal;
+  line-height: calc(30px / var(--scale-factor));
+  font-size: calc(15px / var(--scale-factor));
+  color: #7b7b7b !important
+}
+
+.main__infoTypesRadioForm label {
+  font-weight: normal;
+  line-height: calc(30px / var(--scale-factor));
+  font-size: calc(15px / var(--scale-factor));
+  color: #7b7b7b !important
+}
+
+.main__descript p {
+  font-size: calc(15px / var(--scale-factor));
+  color: #7b7b7b;
+  text-align: center;
+  max-width: 80%;
+  width: 100%;
+}
+
+.header__mob {
+  display: none;
+}
+
+.main__descript {
+  margin-top: calc(20px / var(--scale-factor));
+  display: flex;
+  justify-content: center;
+}
+
+.header__modNav {
+  display: none;
+}
+
+.bootom__header-price {
+  display: flex;
+  gap: calc(5px / var(--scale-factor));
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+tr {
+  height: calc(80px / var(--scale-factor));
+}
+.footer p {
+  font-size: calc(10px / var(--scale-factor));
+  color: #000;
+}
+.main__infoAddsRadioForm svg {
+  width: calc(20px / var(--scale-factor));
+  height: calc(20px / var(--scale-factor));
+}
+footer {
+  background-color: #fede31;
+  padding: calc(15px / var(--scale-factor)) 0px;
+  margin-bottom: calc(50px / var(--scale-factor));
+}
+
+@media screen and (max-width:1200px) {
+  .header__mobNav {
+    display: block;
+  }
+
+  .header__menuUp {
+    display: none;
+  }
+
+  .header__line {
+    display: none;
+  }
+
+  .header__down {
+    display: none;
+  }
+
+  .main__infoTypesRadio {
+    bottom: 65px;
+  }
+
+  .header__mob {
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__mobRight {
+    display: flex;
+    gap: 15px;
+
+  }
+
+  .header__mobLogo img {
+    width: 160px;
+    height: 32px;
+  }
+
+  .header__mobLogo {
+    width: 100%;
+  }
+
+  .header__mobRight span {
+    font-family: 'Glyphicons Halflings';
+    color: #665800;
+    font-size: 22px;
+  }
+
+  .header__burg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header__mobNav {
+    position: absolute;
+    background-color: #fede31;
+    height: 100vh;
+    width: 95%;
+    z-index: 5;
+    left: -110%;
+    transition: .5s;
+  }
+
+  .header__mobNav-active {
+    left: 0;
+    transition: .5s;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .header__mobNavBlock {
+    padding: 10px;
+  }
+
+  .header__mobNavBlock button {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+
+  }
+
+  .header__crossImg {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .header__mobNavSign {
+    padding-left: 20px;
+    color: #665800;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .header__mobLine {
+    background-color: #FFF;
+    height: 1px;
+    width: 100%;
+  }
+
+  .header__mobMenu {
+    margin-top: 15px;
+    padding-left: 20px;
+  }
+
+  .header__mobMenuIcon {
+    font-family: 'Glyphicons Halflings';
+    color: #665800;
+
+    font-size: 25px;
+  }
+
+  .header__mobMenu ul li a {
+    display: flex;
+    gap: 8px;
+    color: #665800;
+    font-size: 25px;
+  }
+
+  .header__mobMenu ul li {
+    margin-bottom: 5px;
+  }
+
+  .main__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main__infoLeft {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 45px;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .main__info {
+    padding: 0px 20px;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .main__info {
+    padding: 0px 20px;
+  }
+
+  .main__infoTypesRadio {
+    gap: 30px;
+    bottom: 55px;
+  }
+
+  .footer {
+    padding: 10px 15px;
+  }
+
+  .footer p {
+    text-align: center;
+  }
+
+  .main__infoLeft {
+    margin-bottom: 0;
+  }
+
+  .main__infoAddsRadio {
+    top: 4px;
+  }
+
+  .header__mobMenuIcon {
+    font-size: 20px;
+  }
+
+  .header__mobMenu ul li a {
+    font-size: 18px;
+  }
+
+  .header__mobNavSign {
+    font-size: 22px;
+  }
+
+  .main__descript p {
+    font-size: 13px;
+  }
+
+  .main__infoTypesRadioForm svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .main__infoTypesRadioForm label {
+    font-size: 11px;
+  }
+
+  table>tbody>tr>td,
+  table>tbody>tr>th,
+  table>tfoot>tr>td,
+  table>tfoot>tr>th,
+  table>thead>tr>td,
+  table>thead>tr>th {
+    font-size: 13px;
+  }
+}
