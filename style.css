@@ -104,6 +104,7 @@ header {
   display: flex;
   height: 70px;
   align-items: center;
+  cursor: pointer;
 
 
 }
@@ -771,3 +772,43 @@ td:last-child {
 
 /*====================================== СТИЛИ ДЛЯ ТАБЛИЦЫ!!!!!!!!!!!!!!!!!!!!!!============================= */
 
+
+
+/* Стили для попапа */
+.popup {
+  display: none; /* Скрыт по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Поверх остальных элементов */
+  opacity: 0; /* Начальная непрозрачность */
+  transition: opacity 0.5s ease; /* Плавный переход */
+}
+
+.popup.show {
+  display: flex; /* Показываем попап */
+  opacity: 1; /* Полная непрозрачность */
+}
+
+
+.popup img {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.close {
+  position: absolute;
+  top: 130px;
+  right: 45px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+
+/* Стили для попапа */
