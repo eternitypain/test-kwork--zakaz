@@ -76,9 +76,11 @@ header {
 }
 .header__menuUp a:hover * {
   color: red !important;
+  transition: .5s;
 }
 .header__menuUp a:hover {
   color: red !important;
+  transition: .5s;
 }
 .header__menuUpIcon {
   font-family: 'Glyphicons Halflings';
@@ -228,6 +230,7 @@ td {
 tr:hover {
   cursor: pointer;
   background-color: #fede31 !important;
+  transition: .5s;
 }
 
 .main__infoAddsBlock svg {
@@ -318,7 +321,7 @@ tr:hover {
 
 .header__downMenu ul li a:hover {
   color: red;
-  transition: .3s;
+  transition: .5s;
 }
 
 .main__infoTypesRadioForm svg {
